@@ -91,6 +91,7 @@ body{
     justify-content: center;
 }
 
+/* --- ESTILIZAÇÃO DOS BOTÕES COM EFEITO SUAVE --- */
 .parametro-senha__botao{
     background-color: var(--fundo-texto);
     color: var(--branco);
@@ -98,6 +99,14 @@ body{
     padding: 24px;
     font-size: 24px;
     cursor: pointer;
+    /* Transição suave de 0.3 segundos ao trocar as cores (conceito da aula) */
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Efeito de Destaque ao passar o mouse (:hover) invertendo as cores */
+.parametro-senha__botao:hover{
+    background-color: var(--borda);
+    color: var(--fundo-texto);
 }
 
 .parametro-senha__texto{
@@ -118,15 +127,13 @@ label{
     cursor: pointer;
 }
 
-/* --- ESTILOS DA BARRA DE FORÇA DA SENHA --- */
-
+/* --- BARRA DE FORÇA DA SENHA --- */
 .barra{
     background-color: var(--fundo-senha);
     height: 30px;
     width: 100%;
 }
 
-/* Classe geral com propriedades repetidas para otimizar o código */
 .forca{
     height: 30px;
     position: relative;
